@@ -17,6 +17,7 @@ services:
       retries: 10
 
   backend:
+    image: jarnoryhanen/task-manage-backend:latest
     build:
       context: ./backend
       dockerfile: Dockerfile
@@ -36,6 +37,7 @@ services:
         condition: service_healthy
 
   frontend:
+    image: jarnoryhanen/task-manage-frontend:latest
     build:
       context: ./frontend
       dockerfile: Dockerfile
